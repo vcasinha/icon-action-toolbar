@@ -41,6 +41,7 @@
     import IconActionToolbar from './IconActionToolbar.vue'
     import { computed, getCurrentInstance } from 'vue'
 
+
     const emitter = defineEmits([ 'actionExecuted', 'show-preview' ])
 
     const props = defineProps({
@@ -157,6 +158,8 @@
 
             }
 
+            /*
+            console.log("R", Nova);
             if (resource.authorizedToDelete && !resource.softDeleted && Nova.$router.page.component !== 'Nova.Index') {
 
                 actions.push({
@@ -167,6 +170,7 @@
                 })
 
             }
+            */
 
         }
 

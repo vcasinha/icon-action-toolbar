@@ -45,21 +45,17 @@
 
 </template>
 
-<script>
+<script setup>
 
     import { Icon, Button } from 'laravel-nova-ui'
+    import { computed } from 'vue'
 
-    export default {
-        components: { Icon, Button },
-        emits: [ 'click' ],
-        props: [ 'actions', 'standalone', 'parentType' ],
-        computed: {
-            isDetailView() {
-                return Nova.$router.page.component === 'Nova.Detail'
-                    && this.parentType === 'DetailActionDropdown.vue'
-            },
-        },
-    }
+    const emitter = defineEmits([ 'click' ])
+    const props = defineProps([ 'actions', 'standalone', 'parentType', 'currentPage' ])
+
+    const isDetailView = computed(() => {
+        return props.parentType === 'DetailActionDropdown.vue'
+    })
 
 </script>
 

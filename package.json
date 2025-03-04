@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "dev": "mix",
         "watch": "mix watch",
         "production": "mix --production",
         "nova:install": "npm --prefix='../../vendor/laravel/nova' ci"
